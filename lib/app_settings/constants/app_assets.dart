@@ -1,0 +1,43 @@
+class AppAssets {
+  //images
+  static String splashback = "assets/images/splashback.png";
+  static String splashback2 = "assets/images/splashback2.png";
+  static String logo = "assets/images/logo.png";
+  static String profile = "assets/images/profile.png";
+  static String rankProfile = "assets/images/rank.png";
+  static String referall = "assets/images/referal.png";
+  //icons
+  static String google = "assets/icons/google.png";
+  static String facebook = "assets/icons/facebook.png";
+  static String backbtn = "assets/icons/backbtn.png";
+  static String calender = "assets/icons/calender.png";
+  static String home = "assets/icons/home.png";
+  static String play = "assets/icons/play.png";
+  static String rank = "assets/icons/rank.png";
+  static String more = "assets/icons/more.png";
+  static String bell = "assets/icons/bell.png";
+  static String chat = "assets/icons/chat.png";
+  static String location = "assets/icons/location.png";
+  static String calender2 = "assets/icons/calender2.png";
+  static String racket = "assets/icons/racket.png";
+  static String tournament = "assets/icons/tournament.png";
+  static String read = "assets/icons/read.png";
+  static String search = "assets/icons/search.png";
+  static String filter = "assets/icons/filter.png";
+  static String crown = "assets/icons/crown.png";
+  static String mybooking = "assets/icons/mybooking.png";
+  static String friends = "assets/icons/friends.png";
+  static String package = "assets/icons/package.png";
+  static String loyality = "assets/icons/loyality.png";
+  static String referal = "assets/icons/referal.png";
+  static String voucher = "assets/icons/voucher.png";
+  static String privacy = "assets/icons/privacy.png";
+  static String logout = "assets/icons/logout.png";
+  static String rackett = "assets/icons/rackett.png";
+  static String score = "assets/icons/score.png";
+  static String newgame = "assets/icons/newgame.png";
+  static String direction = "assets/icons/direction.png";
+  static String call = "assets/icons/call.png";
+  static String watch = "assets/icons/watch.png";
+  static String option = "assets/icons/option.png";
+}
