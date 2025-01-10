@@ -40,4 +40,9 @@ class AppAssets {
   static String call = "assets/icons/call.png";
   static String watch = "assets/icons/watch.png";
   static String option = "assets/icons/option.png";
+  static String date = "assets/icons/date.png";
+  static String format = "assets/icons/format.png";
+  static String team = "assets/icons/team.png";
+  static String prize = "assets/icons/prize.png";
+  static String time = "assets/icons/time.png";
 }

@@ -1,5 +1,6 @@
 import 'package:badminton/Pages/CourtDetail/pg_courtdetail.dart';
 import 'package:badminton/Pages/Notification/pg_notification.dart';
+import 'package:badminton/Pages/Tournaments/pg_tournaments.dart';
 import 'package:badminton/Pages/Venues/pg_venues.dart';
 import 'package:badminton/app_settings/components/label.dart';
 import 'package:badminton/app_settings/components/widget_global_margin.dart';
@@ -379,30 +380,40 @@ class _PgTabhomeState extends State<PgTabhome> {
                             ),
                           ),
                           Column(children: [
-                            Container(
-                                padding: const EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                  color: AppColors.lightGrey,
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Column(children: [
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        AppAssets.tournament,
-                                        fit: BoxFit.contain,
-                                        width: 44,
-                                        height: 44,
+                            GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const PgTournaments(),
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                    padding: const EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                      color: AppColors.lightGrey,
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Column(children: [
+                                      Row(
+                                        children: [
+                                          Image.asset(
+                                            AppAssets.tournament,
+                                            fit: BoxFit.contain,
+                                            width: 44,
+                                            height: 44,
+                                          ),
+                                          padHorizontal(5),
+                                          const Label(
+                                            txt: "Tournaments",
+                                            type: TextTypes.f_14_700,
+                                            forceColor: AppColors.blackColor,
+                                          ),
+                                        ],
                                       ),
-                                      padHorizontal(5),
-                                      const Label(
-                                        txt: "Tournaments",
-                                        type: TextTypes.f_14_700,
-                                        forceColor: AppColors.blackColor,
-                                      ),
-                                    ],
-                                  ),
-                                ])),
+                                    ]))),
                             padVertical(10),
                             Container(
                                 padding: const EdgeInsets.all(10),
