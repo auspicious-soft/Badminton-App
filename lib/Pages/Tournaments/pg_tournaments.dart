@@ -1,3 +1,4 @@
+import 'package:badminton/Pages/EnrollScreen/pg_enrollscreen.dart';
 import 'package:badminton/Pages/TournamentDetail/pg_tournament_detail.dart';
 import 'package:badminton/app_settings/components/label.dart';
 import 'package:badminton/app_settings/components/widget_global_margin.dart';
@@ -17,7 +18,7 @@ class PgTournaments extends StatefulWidget {
 
 class _PgTournamentsState extends State<PgTournaments> {
   int selectedButton = 0;
-  int selectedButton2 = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -191,55 +192,37 @@ class _PgTournamentsState extends State<PgTournaments> {
                       ),
                     ),
                     padVertical(20),
-                    ListView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 4,
-                      itemBuilder: (context, index) {
-                        return GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const PgTournamentDetail(),
-                                ),
-                              );
-                            },
-                            child: Container(
-                                margin: const EdgeInsets.symmetric(vertical: 5),
-                                padding: const EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                  color: AppColors.lightGrey,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Column(
-                                  children: [
-                                    padVertical(10),
-                                    Row(
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(10)),
-                                          child: Image.asset(
-                                            AppAssets.rankProfile,
-                                            fit: BoxFit.fill,
-                                            height: 96,
-                                            width: 98,
-                                          ),
+                    selectedButton == 0
+                        ? Column(children: [
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemCount: 4,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PgTournamentDetail(),
                                         ),
-                                        padHorizontal(10),
-                                        Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              const Label(
-                                                txt: "Paddle Tournament",
-                                                type: TextTypes.f_18_700,
-                                                forceColor:
-                                                    AppColors.primaryColor,
-                                              ),
-                                              Row(children: [
+                                      );
+                                    },
+                                    child: Container(
+                                        margin: const EdgeInsets.symmetric(
+                                            vertical: 5),
+                                        padding: const EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                          color: AppColors.lightGrey,
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            padVertical(10),
+                                            Row(
+                                              children: [
                                                 ClipRRect(
                                                   borderRadius:
                                                       const BorderRadius.all(
@@ -247,123 +230,360 @@ class _PgTournamentsState extends State<PgTournaments> {
                                                   child: Image.asset(
                                                     AppAssets.rankProfile,
                                                     fit: BoxFit.fill,
-                                                    height: 17,
-                                                    width: 17,
+                                                    height: 96,
+                                                    width: 98,
                                                   ),
                                                 ),
-                                                padHorizontal(5),
-                                                Label(
-                                                  txt: "4/12 Players Joined",
-                                                  type: TextTypes.f_10_400,
-                                                  forceColor:
-                                                      AppColors.smalltxt,
-                                                )
-                                              ]),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Column(
+                                                padHorizontal(10),
+                                                Column(
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
                                                             .start,
                                                     children: [
-                                                      padVertical(5),
+                                                      const Label(
+                                                        txt:
+                                                            "Paddle Tournament",
+                                                        type:
+                                                            TextTypes.f_18_700,
+                                                        forceColor: AppColors
+                                                            .primaryColor,
+                                                      ),
                                                       Row(children: [
-                                                        Image.asset(
-                                                          AppAssets.location,
-                                                          fit: BoxFit.contain,
-                                                          width: 15,
-                                                          height: 15,
+                                                        ClipRRect(
+                                                          borderRadius:
+                                                              const BorderRadius
+                                                                  .all(Radius
+                                                                      .circular(
+                                                                          10)),
+                                                          child: Image.asset(
+                                                            AppAssets
+                                                                .rankProfile,
+                                                            fit: BoxFit.fill,
+                                                            height: 17,
+                                                            width: 17,
+                                                          ),
                                                         ),
                                                         padHorizontal(5),
                                                         const Label(
                                                           txt:
-                                                              "Kemmer Trafficway, West Zenatown,",
+                                                              "4/12 Players Joined",
                                                           type: TextTypes
                                                               .f_10_400,
                                                           forceColor: AppColors
                                                               .smalltxt,
                                                         )
                                                       ]),
-                                                      padVertical(10),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              padVertical(5),
+                                                              Row(children: [
+                                                                Image.asset(
+                                                                  AppAssets
+                                                                      .location,
+                                                                  fit: BoxFit
+                                                                      .contain,
+                                                                  width: 15,
+                                                                  height: 15,
+                                                                ),
+                                                                padHorizontal(
+                                                                    5),
+                                                                const Label(
+                                                                  txt:
+                                                                      "Kemmer Trafficway, West Zenatown,",
+                                                                  type: TextTypes
+                                                                      .f_10_400,
+                                                                  forceColor:
+                                                                      AppColors
+                                                                          .smalltxt,
+                                                                )
+                                                              ]),
+                                                              padVertical(10),
+                                                              Row(children: [
+                                                                Image.asset(
+                                                                  AppAssets
+                                                                      .calender2,
+                                                                  fit: BoxFit
+                                                                      .contain,
+                                                                  width: 15,
+                                                                  height: 15,
+                                                                  color: AppColors
+                                                                      .primaryColor,
+                                                                ),
+                                                                padHorizontal(
+                                                                    5),
+                                                                const Label(
+                                                                  txt:
+                                                                      "Nov 10, 2024 | 08:00 A.M.",
+                                                                  type: TextTypes
+                                                                      .f_10_400,
+                                                                  forceColor:
+                                                                      AppColors
+                                                                          .smalltxt,
+                                                                )
+                                                              ])
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ])
+                                              ],
+                                            ),
+                                            padVertical(20),
+                                            Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Expanded(
+                                                      child: GestureDetector(
+                                                          onTap: () {
+                                                            Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        const PgTournamentDetail(),
+                                                              ),
+                                                            );
+                                                          },
+                                                          child: Container(
+                                                              height: 44,
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .symmetric(
+                                                                      horizontal:
+                                                                          15,
+                                                                      vertical:
+                                                                          10),
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: AppColors
+                                                                    .whiteColor,
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            8),
+                                                              ),
+                                                              child:
+                                                                  const Center(
+                                                                child: Label(
+                                                                  txt:
+                                                                      "View Details",
+                                                                  type: TextTypes
+                                                                      .f_12_500,
+                                                                  forceColor:
+                                                                      AppColors
+                                                                          .grey,
+                                                                ),
+                                                              )))),
+                                                  padHorizontal(20),
+                                                  Expanded(
+                                                    child: GestureDetector(
+                                                        onTap: () {
+                                                          Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                              builder: (context) =>
+                                                                  const PgEnrollscreen(),
+                                                            ),
+                                                          );
+                                                        },
+                                                        child: Container(
+                                                            height: 44,
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .symmetric(
+                                                                    horizontal:
+                                                                        15,
+                                                                    vertical:
+                                                                        10),
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: AppColors
+                                                                  .blue2,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          8),
+                                                            ),
+                                                            child: const Center(
+                                                                child: Label(
+                                                              txt: "Enroll Now",
+                                                              type: TextTypes
+                                                                  .f_12_500,
+                                                              forceColor:
+                                                                  AppColors
+                                                                      .whiteColor,
+                                                            )))),
+                                                  )
+                                                ]),
+                                            padVertical(10),
+                                          ],
+                                        )));
+                              },
+                            )
+                          ])
+                        : Column(children: [
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemCount: 4,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PgTournamentDetail(),
+                                        ),
+                                      );
+                                    },
+                                    child: Container(
+                                        margin: const EdgeInsets.symmetric(
+                                            vertical: 5),
+                                        padding: const EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                          color: AppColors.lightGrey,
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            padVertical(10),
+                                            Row(
+                                              children: [
+                                                ClipRRect(
+                                                  borderRadius:
+                                                      const BorderRadius.all(
+                                                          Radius.circular(10)),
+                                                  child: Image.asset(
+                                                    AppAssets.rankProfile,
+                                                    fit: BoxFit.fill,
+                                                    height: 96,
+                                                    width: 98,
+                                                  ),
+                                                ),
+                                                padHorizontal(10),
+                                                Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      const Label(
+                                                        txt:
+                                                            "Paddle Tournament",
+                                                        type:
+                                                            TextTypes.f_18_700,
+                                                        forceColor: AppColors
+                                                            .primaryColor,
+                                                      ),
                                                       Row(children: [
-                                                        Image.asset(
-                                                          AppAssets.calender2,
-                                                          fit: BoxFit.contain,
-                                                          width: 15,
-                                                          height: 15,
-                                                          color: AppColors
-                                                              .primaryColor,
+                                                        ClipRRect(
+                                                          borderRadius:
+                                                              const BorderRadius
+                                                                  .all(Radius
+                                                                      .circular(
+                                                                          10)),
+                                                          child: Image.asset(
+                                                            AppAssets
+                                                                .rankProfile,
+                                                            fit: BoxFit.fill,
+                                                            height: 17,
+                                                            width: 17,
+                                                          ),
                                                         ),
                                                         padHorizontal(5),
                                                         const Label(
                                                           txt:
-                                                              "Nov 10, 2024 | 08:00 A.M.",
+                                                              "4/12 Players Joined",
                                                           type: TextTypes
                                                               .f_10_400,
                                                           forceColor: AppColors
                                                               .smalltxt,
                                                         )
-                                                      ])
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ])
-                                      ],
-                                    ),
-                                    padVertical(20),
-                                    Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Expanded(
-                                              child: GestureDetector(
-                                                  onTap: () {
-                                                    setState(() {
-                                                      selectedButton2 = 0;
-                                                    });
-                                                  },
-                                                  child: Container(
-                                                      height: 44,
-                                                      padding: const EdgeInsets
-                                                          .symmetric(
-                                                          horizontal: 15,
-                                                          vertical: 10),
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            selectedButton2 == 0
-                                                                ? AppColors
-                                                                    .blue2
-                                                                : AppColors
-                                                                    .whiteColor,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
+                                                      ]),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              padVertical(5),
+                                                              Row(children: [
+                                                                Image.asset(
+                                                                  AppAssets
+                                                                      .location,
+                                                                  fit: BoxFit
+                                                                      .contain,
+                                                                  width: 15,
+                                                                  height: 15,
+                                                                ),
+                                                                padHorizontal(
+                                                                    5),
+                                                                const Label(
+                                                                  txt:
+                                                                      "Kemmer Trafficway, West Zenatown,",
+                                                                  type: TextTypes
+                                                                      .f_10_400,
+                                                                  forceColor:
+                                                                      AppColors
+                                                                          .smalltxt,
+                                                                )
+                                                              ]),
+                                                              padVertical(10),
+                                                              Row(children: [
+                                                                Image.asset(
+                                                                  AppAssets
+                                                                      .calender2,
+                                                                  fit: BoxFit
+                                                                      .contain,
+                                                                  width: 15,
+                                                                  height: 15,
+                                                                  color: AppColors
+                                                                      .primaryColor,
+                                                                ),
+                                                                padHorizontal(
+                                                                    5),
+                                                                const Label(
+                                                                  txt:
+                                                                      "Nov 10, 2024 | 08:00 A.M.",
+                                                                  type: TextTypes
+                                                                      .f_10_400,
+                                                                  forceColor:
+                                                                      AppColors
+                                                                          .smalltxt,
+                                                                )
+                                                              ])
+                                                            ],
+                                                          ),
+                                                        ],
                                                       ),
-                                                      child: Center(
-                                                        child: Label(
-                                                          txt: "View Details",
-                                                          type: TextTypes
-                                                              .f_12_500,
-                                                          forceColor:
-                                                              selectedButton2 ==
-                                                                      0
-                                                                  ? AppColors
-                                                                      .whiteColor
-                                                                  : AppColors
-                                                                      .grey,
-                                                        ),
-                                                      )))),
-                                          padHorizontal(20),
-                                          Expanded(
-                                            child: GestureDetector(
+                                                    ])
+                                              ],
+                                            ),
+                                            padVertical(20),
+                                            GestureDetector(
                                                 onTap: () {
-                                                  setState(() {
-                                                    selectedButton2 = 1;
-                                                  });
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          const PgTournamentDetail(),
+                                                    ),
+                                                  );
                                                 },
                                                 child: Container(
                                                     height: 44,
@@ -373,31 +593,27 @@ class _PgTournamentsState extends State<PgTournaments> {
                                                         vertical: 10),
                                                     decoration: BoxDecoration(
                                                       color:
-                                                          selectedButton2 == 1
-                                                              ? AppColors.blue2
-                                                              : AppColors
-                                                                  .whiteColor,
+                                                          AppColors.whiteColor,
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               8),
                                                     ),
-                                                    child: Center(
-                                                        child: Label(
-                                                      txt: "Enroll Now",
-                                                      type: TextTypes.f_12_500,
-                                                      forceColor:
-                                                          selectedButton2 == 1
-                                                              ? AppColors
-                                                                  .whiteColor
-                                                              : AppColors.grey,
-                                                    )))),
-                                          )
-                                        ]),
-                                    padVertical(10),
-                                  ],
-                                )));
-                      },
-                    ),
+                                                    child: const Center(
+                                                      child: Label(
+                                                        txt: "View Details",
+                                                        type:
+                                                            TextTypes.f_12_500,
+                                                        forceColor:
+                                                            AppColors.grey,
+                                                      ),
+                                                    ))),
+                                            padHorizontal(20),
+                                            padVertical(10),
+                                          ],
+                                        )));
+                              },
+                            )
+                          ]),
                   ]))))
             ],
           )

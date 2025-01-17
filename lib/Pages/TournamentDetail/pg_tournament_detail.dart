@@ -2,9 +2,8 @@ import 'package:badminton/app_settings/components/label.dart';
 import 'package:badminton/app_settings/components/widget_global_margin.dart';
 import 'package:badminton/app_settings/constants/app_assets.dart';
 import 'package:badminton/app_settings/constants/app_colors.dart';
-import 'package:badminton/app_settings/constants/app_const.dart';
 import 'package:badminton/app_settings/constants/app_dim.dart';
-
+import 'package:badminton/app_settings/constants/common_button.dart';
 import 'package:flutter/material.dart';
 
 class PgTournamentDetail extends StatefulWidget {
@@ -270,10 +269,235 @@ class _PgTournamentDetailState extends State<PgTournamentDetail> {
                               txt: "Schedule",
                               type: TextTypes.f_14_700,
                             ),
-                            padVertical(10),
+                            padVertical(5),
                             const Divider(),
+                            padVertical(3),
+                            const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Label(
+                                          txt: "Day 1 ",
+                                          type: TextTypes.f_12_700),
+                                      Label(
+                                          txt: "(17 Dec)",
+                                          type: TextTypes.f_10_600)
+                                    ],
+                                  ),
+                                  Label(
+                                    txt: "8 AM - 12 PM , 6 PM - 9 PM",
+                                    type: TextTypes.f_12_700,
+                                    forceColor: AppColors.smalltxt,
+                                  ),
+                                ]),
+                            padVertical(5),
+                            const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Label(
+                                          txt: "Day 1 ",
+                                          type: TextTypes.f_12_700),
+                                      Label(
+                                          txt: "(17 Dec)",
+                                          type: TextTypes.f_10_600)
+                                    ],
+                                  ),
+                                  Label(
+                                    txt: "8 AM - 12 PM , 6 PM - 9 PM",
+                                    type: TextTypes.f_12_700,
+                                    forceColor: AppColors.smalltxt,
+                                  ),
+                                ]),
+                            padVertical(5),
+                            const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Label(
+                                          txt: "Day 1 ",
+                                          type: TextTypes.f_12_700),
+                                      Label(
+                                          txt: "(17 Dec)",
+                                          type: TextTypes.f_10_600)
+                                    ],
+                                  ),
+                                  Label(
+                                    txt: "8 AM - 12 PM , 6 PM - 9 PM",
+                                    type: TextTypes.f_12_700,
+                                    forceColor: AppColors.smalltxt,
+                                  ),
+                                ])
                           ],
-                        ))
+                        )),
+                    Container(
+                        margin: const EdgeInsets.symmetric(vertical: 5),
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: AppColors.lightGrey,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              padVertical(10),
+                              const Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Label(
+                                      txt: "Teams Joined",
+                                      type: TextTypes.f_14_700,
+                                    ),
+                                    Label(
+                                      txt: "3/16",
+                                      type: TextTypes.f_14_700,
+                                    ),
+                                  ]),
+                              padVertical(5),
+                              const Divider(),
+                              padVertical(5),
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(children: [
+                                      ClipRRect(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(15)),
+                                        child: Image.asset(
+                                          AppAssets.rankProfile,
+                                          fit: BoxFit.fill,
+                                          height: 30,
+                                          width: 30,
+                                        ),
+                                      ),
+                                      padHorizontal(15),
+                                      const Label(
+                                          txt: "Rebecca & Steven",
+                                          type: TextTypes.f_12_700)
+                                    ]),
+                                    Container(
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 5),
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: BoxDecoration(
+                                        color: AppColors.blue2,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: const Icon(
+                                        Icons.chat_bubble_outline,
+                                        size: 18,
+                                        color: AppColors.whiteColor,
+                                      ),
+                                    )
+                                  ]),
+                              padVertical(3),
+                              Divider(),
+                              padVertical(5),
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(children: [
+                                      ClipRRect(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(15)),
+                                        child: Image.asset(
+                                          AppAssets.rankProfile,
+                                          fit: BoxFit.fill,
+                                          height: 30,
+                                          width: 30,
+                                        ),
+                                      ),
+                                      padHorizontal(15),
+                                      const Label(
+                                          txt: "Rebecca & Steven",
+                                          type: TextTypes.f_12_700)
+                                    ]),
+                                    Container(
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 5),
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: BoxDecoration(
+                                        color: AppColors.blue2,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: const Icon(
+                                        Icons.chat_bubble_outline,
+                                        size: 18,
+                                        color: AppColors.whiteColor,
+                                      ),
+                                    )
+                                  ]),
+                              padVertical(3),
+                              Divider(),
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(children: [
+                                      ClipRRect(
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(15)),
+                                        child: Image.asset(
+                                          AppAssets.rankProfile,
+                                          fit: BoxFit.fill,
+                                          height: 30,
+                                          width: 30,
+                                        ),
+                                      ),
+                                      padHorizontal(15),
+                                      const Label(
+                                          txt: "Rebecca & Steven",
+                                          type: TextTypes.f_12_700),
+                                    ]),
+                                    Container(
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 5),
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: BoxDecoration(
+                                        color: AppColors.blue2,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: const Icon(
+                                        Icons.chat_bubble_outline,
+                                        size: 18,
+                                        color: AppColors.whiteColor,
+                                      ),
+                                    )
+                                  ]),
+                            ])),
+                    Container(
+                      height: 47,
+                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: AppColors.lightGrey,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Label(
+                              txt: "Code of conduct", type: TextTypes.f_12_700),
+                          Icon(Icons.keyboard_arrow_down_rounded)
+                        ],
+                      ),
+                    ),
+                    padVertical(7),
+                    SizedBox(
+                        width: double.infinity,
+                        child: commonButton(
+                            context: context,
+                            onPressed: () {},
+                            txt: "Book Now"))
                   ]))))
             ],
           )
