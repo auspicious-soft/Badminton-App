@@ -6,7 +6,6 @@ import 'package:badminton/app_settings/constants/app_assets.dart';
 import 'package:badminton/app_settings/constants/app_colors.dart';
 import 'package:badminton/app_settings/constants/app_const.dart';
 import 'package:badminton/app_settings/constants/app_dim.dart';
-
 import 'package:flutter/material.dart';
 
 class PgTournaments extends StatefulWidget {

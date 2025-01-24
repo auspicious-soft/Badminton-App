@@ -45,4 +45,7 @@ class AppAssets {
   static String team = "assets/icons/team.png";
   static String prize = "assets/icons/prize.png";
   static String time = "assets/icons/time.png";
+  static String cart = "assets/icons/cart.png";
+  static String add = "assets/icons/add.png";
+  static String less = "assets/icons/less.png";
 }
