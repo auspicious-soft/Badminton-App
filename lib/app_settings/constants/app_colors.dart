@@ -24,4 +24,5 @@ class AppColors {
   static const slidercon = Color.fromRGBO(220, 235, 243, 1);
   static const lightpercen = Color.fromRGBO(220, 235, 243, 1);
   static const sliderin = Color.fromRGBO(149, 184, 203, 1);
+  static const green2 = Color.fromRGBO(87, 208, 53, 1);
 }

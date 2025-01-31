@@ -48,4 +48,5 @@ class AppAssets {
   static String cart = "assets/icons/cart.png";
   static String add = "assets/icons/add.png";
   static String less = "assets/icons/less.png";
+  static String myOrder = "assets/icons/order.png";
 }

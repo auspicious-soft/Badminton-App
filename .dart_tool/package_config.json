@@ -56,6 +56,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "flutter_dash",
+      "rootUri": "file:///Users/anilsharma/.pub-cache/hosted/pub.dev/flutter_dash-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///Users/anilsharma/.pub-cache/hosted/pub.dev/flutter_lints-3.0.2",
       "packageUri": "lib/",
@@ -188,7 +194,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-12-27T05:46:50.962456Z",
+  "generated": "2025-01-31T12:15:01.444203Z",
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///Users/anilsharma/Documents/Flutter/sdk/flutter",

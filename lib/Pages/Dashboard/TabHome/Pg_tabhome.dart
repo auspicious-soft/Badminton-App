@@ -1,5 +1,6 @@
 import 'package:badminton/Pages/CourtDetail/pg_courtdetail.dart';
 import 'package:badminton/Pages/Merchandise/pg_merchandise.dart';
+import 'package:badminton/Pages/Messages/pg_messages.dart';
 import 'package:badminton/Pages/Notification/pg_notification.dart';
 import 'package:badminton/Pages/Tournaments/pg_tournaments.dart';
 import 'package:badminton/Pages/Venues/pg_venues.dart';
@@ -94,11 +95,21 @@ class _PgTabhomeState extends State<PgTabhome> {
                               )
                             ]),
                         Row(children: [
-                          Image.asset(
-                            AppAssets.chat,
-                            fit: BoxFit.contain,
-                            width: 40,
-                            height: 40,
+                          GestureDetector(
+                            onTap: () => {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const PgMessages(),
+                                ),
+                              )
+                            },
+                            child: Image.asset(
+                              AppAssets.chat,
+                              fit: BoxFit.contain,
+                              width: 40,
+                              height: 40,
+                            ),
                           ),
                           padHorizontal(5),
                           GestureDetector(

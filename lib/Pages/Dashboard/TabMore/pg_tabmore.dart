@@ -1,4 +1,6 @@
 import 'package:badminton/Pages/Friends/pg_friends.dart';
+import 'package:badminton/Pages/MyOrder/pg_my_order.dart';
+import 'package:badminton/Pages/Packages/pg_packages.dart';
 import 'package:badminton/Pages/PrivacyPolicy/pg_privacypolicy.dart';
 import 'package:badminton/Pages/ReferCode/pg_refercode.dart';
 import 'package:badminton/Pages/Voucher/pg_voucher.dart';
@@ -237,6 +239,42 @@ class _PgTabmoreState extends State<PgTabmore> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
+                                      builder: (context) => const PgMyOrder(),
+                                    ),
+                                  );
+                                },
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 40,
+                                      width: 40,
+                                      decoration: BoxDecoration(
+                                        color: AppColors.whiteColor,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Align(
+                                          alignment: Alignment.center,
+                                          child: Image.asset(
+                                            AppAssets.myOrder,
+                                            fit: BoxFit.contain,
+                                            width: 16,
+                                            height: 16,
+                                          )),
+                                    ),
+                                    padHorizontal(20),
+                                    const Label(
+                                        txt: "My Orders",
+                                        type: TextTypes.f_12_700)
+                                  ],
+                                )),
+                            padVertical(6),
+                            const Divider(),
+                            padVertical(6),
+                            GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
                                       builder: (context) => const PgFriends(),
                                     ),
                                   );
@@ -268,29 +306,39 @@ class _PgTabmoreState extends State<PgTabmore> {
                             padVertical(6),
                             const Divider(),
                             padVertical(6),
-                            Row(
-                              children: [
-                                Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.whiteColor,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Align(
-                                      alignment: Alignment.center,
-                                      child: Image.asset(
-                                        AppAssets.package,
-                                        fit: BoxFit.contain,
-                                        width: 16,
-                                        height: 16,
-                                      )),
-                                ),
-                                padHorizontal(20),
-                                const Label(
-                                    txt: "Packages", type: TextTypes.f_12_700)
-                              ],
-                            ),
+                            GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const PgPackages(),
+                                    ),
+                                  );
+                                },
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 40,
+                                      width: 40,
+                                      decoration: BoxDecoration(
+                                        color: AppColors.whiteColor,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Align(
+                                          alignment: Alignment.center,
+                                          child: Image.asset(
+                                            AppAssets.package,
+                                            fit: BoxFit.contain,
+                                            width: 16,
+                                            height: 16,
+                                          )),
+                                    ),
+                                    padHorizontal(20),
+                                    const Label(
+                                        txt: "Packages",
+                                        type: TextTypes.f_12_700)
+                                  ],
+                                )),
                             padVertical(6),
                             const Divider(),
                             padVertical(6),
